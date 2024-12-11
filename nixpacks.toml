@@ -1,3 +1,10 @@
 [variables]
-[phases.start]
+# Define the commands or configurations used across phases
 cmds = ["python main.py"]
+
+[phases.start]
+# Define the start phase
+cmds = [
+    "pip install -r requirements.txt",  # Add this line to install dependencies
+    "python main.py"                    # Original command
+]
