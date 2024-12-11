@@ -1,14 +1,17 @@
 [phases.setup]
 cmds = [
-    "apt-get update && apt-get install -y wget && \
+    """
+    apt-get update && apt-get install -y wget && \
     wget http://ftp.gnu.org/gnu/libc/glibc-2.38.tar.gz && \
     tar -xvzf glibc-2.38.tar.gz && cd glibc-2.38 && \
-    mkdir build && cd build && make && make install",
+    mkdir build && cd build && make && make install
+    """,
     "apt-get update && apt-get install -y --no-install-recommends python3-pip",
     "pip install --no-cache-dir --upgrade pip"
 ]
+
 [phases.start]
 cmds = [
-    "pip install -r requirements.txt",  # Add this line to install dependencies
-    "python main.py"                    # Original command
+    "pip install -r requirements.txt",
+    "python main.py"
 ]
