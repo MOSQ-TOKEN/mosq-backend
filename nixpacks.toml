@@ -1,0 +1,3 @@
+[variables]
+[phases.start]
+cmds = ["python main.py"]
